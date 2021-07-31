@@ -1,0 +1,3 @@
+{
+  "app": "python app.py -a $AWS_ACCOUNT_ID -r $AWS_REGION"
+}

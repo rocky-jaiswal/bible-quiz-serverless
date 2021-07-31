@@ -4,17 +4,14 @@ module.exports = {
     node: true,
     jest: true
   },
-  extends: [
-    'standard'
-  ],
+  extends: ['standard'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: [
-    '@typescript-eslint'
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
+    'space-before-function-paren': ['warn', 'never']
   }
 }

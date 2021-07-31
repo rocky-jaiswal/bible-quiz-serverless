@@ -1,2 +1,7 @@
 node_modules/
 yarn*.log
+dist/
+**/lambda.zip
+cdk.out
+.vscode
+__pycache__/
