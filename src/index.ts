@@ -10,7 +10,7 @@ export const handler = async (arg1: any, arg2: any, arg3: any) => {
     schema
   })
 
-  const h = server.createHandler()
+  const apolloHandler = server.createHandler()
 
-  return await h(arg1, arg2, arg3)
+  return await apolloHandler(arg1, arg2, arg3)
 }

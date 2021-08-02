@@ -2,6 +2,7 @@ from aws_cdk import (
     core as cdk,
     aws_lambda as _lambda,
     aws_apigateway as _apigw,
+    aws_dynamodb,
 )
 
 
@@ -31,3 +32,17 @@ class AppStack(cdk.Stack):
         )
         rest_api.root.add_method("GET", entity_lambda_integration)
         rest_api.root.add_method("POST", entity_lambda_integration)
+
+        self.table_name = "bible_quiz_questions"
+
+        questions_table = aws_dynamodb.Table(
+            self,
+            "QuestionsTable",
+            table_name=self.table_name,
+            partition_key=aws_dynamodb.Attribute(
+                name=f"id", type=aws_dynamodb.AttributeType.STRING
+            ),
+            removal_policy=cdk.RemovalPolicy.DESTROY,  # NOT recommended for production code
+        )
+
+        questions_table.grant_full_access(base_lambda)

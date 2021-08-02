@@ -11,6 +11,7 @@ python = "^3.7"
 "aws-cdk.aws-apigateway" = "^1.116.0"
 "aws-cdk.aws-apigatewayv2" = "^1.116.0"
 "aws-cdk.aws-apigatewayv2-integrations" = "^1.116.0"
+"aws-cdk.aws-dynamodb" = "^1.116.0"
 
 [tool.poetry.dev-dependencies]
 black = "^21.7b0"

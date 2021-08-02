@@ -230,6 +230,27 @@ jsii = ">=1.31.0,<2.0.0"
 publication = ">=0.0.3"
 
 [[package]]
+name = "aws-cdk.aws-dynamodb"
+version = "1.116.0"
+description = "The CDK Construct Library for AWS::DynamoDB"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"aws-cdk.aws-applicationautoscaling" = "1.116.0"
+"aws-cdk.aws-cloudwatch" = "1.116.0"
+"aws-cdk.aws-iam" = "1.116.0"
+"aws-cdk.aws-kinesis" = "1.116.0"
+"aws-cdk.aws-kms" = "1.116.0"
+"aws-cdk.aws-lambda" = "1.116.0"
+"aws-cdk.core" = "1.116.0"
+"aws-cdk.custom-resources" = "1.116.0"
+constructs = ">=3.3.69,<4.0.0"
+jsii = ">=1.31.0,<2.0.0"
+publication = ">=0.0.3"
+
+[[package]]
 name = "aws-cdk.aws-ec2"
 version = "1.116.0"
 description = "The CDK Construct Library for AWS::EC2"
@@ -356,6 +377,24 @@ python-versions = ">=3.6"
 [package.dependencies]
 "aws-cdk.core" = "1.116.0"
 "aws-cdk.region-info" = "1.116.0"
+constructs = ">=3.3.69,<4.0.0"
+jsii = ">=1.31.0,<2.0.0"
+publication = ">=0.0.3"
+
+[[package]]
+name = "aws-cdk.aws-kinesis"
+version = "1.116.0"
+description = "The CDK Construct Library for AWS::Kinesis"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+"aws-cdk.aws-cloudwatch" = "1.116.0"
+"aws-cdk.aws-iam" = "1.116.0"
+"aws-cdk.aws-kms" = "1.116.0"
+"aws-cdk.aws-logs" = "1.116.0"
+"aws-cdk.core" = "1.116.0"
 constructs = ">=3.3.69,<4.0.0"
 jsii = ">=1.31.0,<2.0.0"
 publication = ">=0.0.3"
@@ -826,7 +865,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "753e8df3e18d5cbd0393584954300eb85b9c88cb4917534edfeb426ee1fd2535"
+content-hash = "6c051cf25548595bd7b07c1bf669365a3fcc56a619b69cad597ced4f0ffcf2d2"
 
 [metadata.files]
 appdirs = [
@@ -885,6 +924,10 @@ attrs = [
     {file = "aws-cdk.aws-cognito-1.116.0.tar.gz", hash = "sha256:63bfa599f8a87c1bcc789558326eb54f14b1c619439246d71a7a8216c5f98e74"},
     {file = "aws_cdk.aws_cognito-1.116.0-py3-none-any.whl", hash = "sha256:87560c51ddd64a3d7af5e37a692d59e58fb2c64fb846896221d6edb1e8131e52"},
 ]
+"aws-cdk.aws-dynamodb" = [
+    {file = "aws-cdk.aws-dynamodb-1.116.0.tar.gz", hash = "sha256:91df6eab2a44dcd39c1b028f4f18fdcd0017d2105fe04fac13dd20ab170d2aa2"},
+    {file = "aws_cdk.aws_dynamodb-1.116.0-py3-none-any.whl", hash = "sha256:ce3f979bed3a42c31631715fbe0f5775864c597a30ec63ee1d5c6248eb3367c8"},
+]
 "aws-cdk.aws-ec2" = [
     {file = "aws-cdk.aws-ec2-1.116.0.tar.gz", hash = "sha256:843f51f295b5082eb0653511a47fdf3e36c305a33716e1d2588b0a6037873f00"},
     {file = "aws_cdk.aws_ec2-1.116.0-py3-none-any.whl", hash = "sha256:47f434a1bd73f4ddfc7d38e61a195e3f879c13ecea6be2318b7cee1c16153f27"},
@@ -912,6 +955,10 @@ attrs = [
 "aws-cdk.aws-iam" = [
     {file = "aws-cdk.aws-iam-1.116.0.tar.gz", hash = "sha256:e0a008e1546c395ae142ae9bc765206674c4ee6ec2c7f233c61f1cb7c3a88383"},
     {file = "aws_cdk.aws_iam-1.116.0-py3-none-any.whl", hash = "sha256:3f17c513c2b3f138beb8ecee41de03686e8d04467ff3163d844ff89f5c48eb29"},
+]
+"aws-cdk.aws-kinesis" = [
+    {file = "aws-cdk.aws-kinesis-1.116.0.tar.gz", hash = "sha256:90b6129114688092a19a9fdd23201db55241e2b3e810ad6abe5f54b48244f7b4"},
+    {file = "aws_cdk.aws_kinesis-1.116.0-py3-none-any.whl", hash = "sha256:6d24bd900337c578dbd8ad94bc4bc75b268829b4ebd5622667bada12e34df1e0"},
 ]
 "aws-cdk.aws-kms" = [
     {file = "aws-cdk.aws-kms-1.116.0.tar.gz", hash = "sha256:2ec109dd936ef0328347000e1a28a8c9bd70bed33b1b77c6cf8151aed4479bb2"},

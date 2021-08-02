@@ -1,11 +1,11 @@
-import path from 'path'
 import { buildSchema } from 'type-graphql'
 
 import GreetingsResolver from '../resolvers/greetingsResolver'
+import QuestionsResolver from '../resolvers/questionsResolver'
 
 export default async function bootstrapSchema() {
   return buildSchema({
-    resolvers: [GreetingsResolver],
-    emitSchemaFile: path.resolve('/tmp/__snapshots__/schema/schema.gql')
+    resolvers: [GreetingsResolver, QuestionsResolver],
+    emitSchemaFile: false
   })
 }

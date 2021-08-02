@@ -12,9 +12,11 @@
     "lint": "yarn eslint 'src/**/*'",
     "test": "yarn jest",
     "build": "rm -rf dist/ && tsc && rm -rf dist/tests",
-    "build:prod": "./build_prod.sh"
+    "build:lambda": "./build_lambda.sh"
   },
   "dependencies": {
+    "@aws/dynamodb-data-mapper": "^0.7.3",
+    "@aws/dynamodb-data-mapper-annotations": "^0.7.3",
     "apollo-server-lambda": "^3.0.2",
     "class-validator": "^0.13.1",
     "graphql": "^15.5.1",
