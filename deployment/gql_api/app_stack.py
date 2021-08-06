@@ -10,7 +10,7 @@ class AppStack(cdk.Stack):
     def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, env=kwargs["env"])
 
-        base_lambda = _lambda.Function(
+        gql_lambda = _lambda.Function(
             self,
             "GQL_Lambda",
             handler="index.handler",
@@ -24,7 +24,7 @@ class AppStack(cdk.Stack):
         )
 
         entity_lambda_integration = _apigw.LambdaIntegration(
-            handler=base_lambda,
+            handler=gql_lambda,
         )
 
         rest_api = _apigw.RestApi(
@@ -45,4 +45,4 @@ class AppStack(cdk.Stack):
             removal_policy=cdk.RemovalPolicy.DESTROY,  # NOT recommended for production code
         )
 
-        questions_table.grant_full_access(base_lambda)
+        questions_table.grant_full_access(gql_lambda)
