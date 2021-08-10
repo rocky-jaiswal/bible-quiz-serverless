@@ -18,6 +18,14 @@ class AppStack(cdk.Stack):
             code=_lambda.Code.asset("artifact/lambda.zip"),
         )
 
+        loader_lambda = _lambda.Function(
+            self,
+            "Loader_Lambda",
+            handler="index.handler",
+            runtime=_lambda.Runtime.NODEJS_14_X,
+            code=_lambda.Code.asset("../data-loader/loader.zip"),
+        )
+
         cors_options = _apigw.CorsOptions(
             allow_origins=_apigw.Cors.ALL_ORIGINS,
             allow_methods=_apigw.Cors.ALL_METHODS,
@@ -46,3 +54,4 @@ class AppStack(cdk.Stack):
         )
 
         questions_table.grant_full_access(gql_lambda)
+        questions_table.grant_full_access(loader_lambda)
