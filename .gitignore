@@ -1,8 +1,8 @@
 node_modules
 yarn*.log
 dist/
-**/lambda.zip
 cdk.out
 .vscode
 __pycache__/
-data-loader/loader.zip
+**/loader.zip
+**/lambda.zip

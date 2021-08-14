@@ -23,7 +23,7 @@ class AppStack(cdk.Stack):
             "Loader_Lambda",
             handler="index.handler",
             runtime=_lambda.Runtime.NODEJS_14_X,
-            code=_lambda.Code.asset("../data-loader/loader.zip"),
+            code=_lambda.Code.asset("artifact/loader.zip"),
         )
 
         cors_options = _apigw.CorsOptions(

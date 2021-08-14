@@ -8,6 +8,6 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "build:lambda": "zip -r loader.zip ./*"
+    "build:lambda": "zip -r loader.zip ./* && mv ./loader.zip ./../deployment/artifact"
   }
 }

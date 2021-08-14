@@ -6,3 +6,5 @@
 4. Setup [poetry project](https://python-poetry.org/) with Python 3
 5. `env AWS_ACCOUNT_ID=xxx AWS_REGION=eu-central-1 npx cdk synth`
 6. `env AWS_ACCOUNT_ID=xxx AWS_REGION=eu-central-1 npx cdk deploy`
+
+https://py7jcbc8i4.execute-api.eu-central-1.amazonaws.com/prod/
