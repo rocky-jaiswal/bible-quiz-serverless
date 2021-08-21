@@ -1,0 +1,65 @@
+{
+  "name": "sample-app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.6.0",
+    "axios": "^0.21.0",
+    "graphql": "^15.5.1",
+    "graphql-request": "^3.5.0",
+    "normalize.css": "^8.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-intl": "^5.20.0",
+    "react-redux": "^7.0.0",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^4.0.0",
+    "redux": "^4.0.0",
+    "redux-saga": "^1.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint 'src/**/*' --ignore-pattern 'src/**/*.scss' --ignore-pattern 'src/**/*.css'  --ignore-pattern 'src/i18n/*.json'",
+    "prettier": "prettier --write 'src/**/*'"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.0.0",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.0.0",
+    "@types/react-router": "^5.0.0",
+    "@types/react-router-dom": "^5.0.0",
+    "@types/react-router-redux": "^5.0.16",
+    "node-sass": "^6.0.0",
+    "prettier": "^2.0.0",
+    "redux-devtools-extension": "^2.13.7",
+    "typescript": "^4.3.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
