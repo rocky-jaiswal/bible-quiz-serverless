@@ -1,9 +1,13 @@
-import { attribute, hashKey, table } from '@aws/dynamodb-data-mapper-annotations'
+import {
+  attribute,
+  hashKey,
+  table
+} from '@aws/dynamodb-data-mapper-annotations'
 import { Field, ObjectType, Int } from 'type-graphql'
 
 @ObjectType()
 class Option {
-  @Field(_type => Int)
+  @Field((_type) => Int)
   @attribute()
   id?: number
 
@@ -27,7 +31,15 @@ class Question {
   @attribute()
   public type?: string
 
-  @Field(_type => [Option])
+  @Field({ nullable: false })
+  @attribute()
+  public note?: string
+
+  @Field((_type) => Int)
+  @attribute()
+  public answer?: number
+
+  @Field((_type) => [Option])
   @attribute()
   public options?: Array<Option>
 }
