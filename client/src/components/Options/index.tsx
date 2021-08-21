@@ -1,24 +1,22 @@
+import { OptionType } from '../../constants/types'
+
 import styles from './styles.module.scss'
 
-const Options = (_props: {}) => {
+interface Props {
+  options: OptionType[]
+}
+
+const Options = (props: Props) => {
   return (
     <div className={styles.options_area}>
-      <div className={styles.option}>
-        <button>1</button>
-        <span>Option 1</span>
-      </div>
-      <div className={styles.option}>
-        <button>2</button>
-        <span>Option 2</span>
-      </div>
-      <div className={styles.option}>
-        <button>3</button>
-        <span>Option 3</span>
-      </div>
-      <div className={styles.option}>
-        <button>4</button>
-        <span>Option 4</span>
-      </div>
+      {props.options.map((option: OptionType) => {
+        return (
+          <div className={styles.option} key={`option-${option.id}`}>
+            <button>{option.id}</button>
+            <span>{option.text}</span>
+          </div>
+        )
+      })}
     </div>
   )
 }

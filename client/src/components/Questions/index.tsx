@@ -25,7 +25,7 @@ const Questions = (props: Props) => {
         questionsLength={props.questions.length}
       />
       <Question questionText={props.questions[props.questionIndex].question} />
-      <Options />
+      <Options options={props.questions[props.questionIndex].options} />
     </div>
   )
 }
