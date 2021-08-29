@@ -1,14 +1,21 @@
 import { LocaleEnum } from './enums'
 
 export interface AppState {
-  questionIndex: number
+  question: {
+    currentIndex: number
+    currentId: string | null
+    timerActive: boolean
+  }
+  note: {
+    text: string | null
+  }
+  response: {
+    id: number | null
+    questionIndex: number
+    result: 'unselected' | 'correct' | 'wrong'
+  }
   lang: LocaleEnum
 }
-
-export interface RootState {
-  app: AppState
-}
-
 
 export type OptionType = {
   id: number

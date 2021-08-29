@@ -2,8 +2,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import { withLayout } from '../MainHoc'
 
-import { RootState } from '../../constants/types'
-import { decrementIndex, incrementIndex } from '../../redux/app'
+import { RootState } from '../../store'
+import { resetIndex, incrementIndex, setResponse } from '../../redux/app'
 
 import Questions from '../../components/Questions'
 import LoadingSpinner from '../../components/LoadingSpinner'
@@ -12,24 +12,33 @@ import api from '../../api/questions'
 import styles from './styles.module.scss'
 
 const Root = () => {
-  const questionIndex = useSelector((state: RootState) => state.app.questionIndex)
   const dispatch = useDispatch()
-  const { data, error, isLoading } = api.useGetQuestionsQuery('')
+  const currentQuestionIndex = useSelector((state: RootState) => state.app.question.currentIndex)
+  const noteText = useSelector((state: RootState) => state.app.note.text)
+  const responseResult = useSelector((state: RootState) => state.app.response.result)
 
-  if (error) {
+  const { data: questions, error: errorLoadingQuestions, isLoading: loadingQuestions } = api.useGetQuestionsQuery(null)
+  const [selectResponse, { isLoading: isCheckingResponse, error: errorInChecking }] = api.useValidateResponseMutation()
+
+  if (errorLoadingQuestions || errorInChecking) {
     return <div>Error!!</div>
   }
 
   return (
     <div className={styles.container}>
-      {isLoading ? (
+      {loadingQuestions ? (
         <LoadingSpinner />
       ) : (
         <Questions
-          questions={data}
-          questionIndex={questionIndex}
+          questions={questions}
+          currentQuestionIndex={currentQuestionIndex}
+          isCheckingResponse={isCheckingResponse || noteText !== null}
+          noteText={noteText}
+          responseResult={responseResult}
           incrementIndex={() => dispatch(incrementIndex())}
-          decrementIndex={() => dispatch(decrementIndex())}
+          resetIndex={() => dispatch(resetIndex())}
+          setResponse={(payload: unknown) => dispatch(setResponse(payload))}
+          handleSelection={selectResponse}
         />
       )}
     </div>

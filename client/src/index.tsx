@@ -3,14 +3,14 @@ import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
 import App from './containers/App'
-import { setupStore } from './store'
+import { store } from './store'
 // import * as serviceWorker from './serviceWorker'
 
 import 'normalize.css'
 import './styles/main.css'
 
 ReactDOM.render(
-  <Provider store={setupStore()}>
+  <Provider store={store}>
     <React.StrictMode>
       <App />
     </React.StrictMode>

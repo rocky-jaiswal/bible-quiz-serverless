@@ -4,27 +4,29 @@ import useInterval from '../../hooks/useInterval'
 import styles from './styles.module.scss'
 
 interface Props {
-  questionsLength: number
-  questionIndex: number
-  incrementIndex: () => void
-  decrementIndex: () => void
+  pause: boolean
+  changeQuestion: () => void
 }
+
+const LOAD_TIME = 15
+const REFRESH_TIME = 20
+const WIDTH_INCREASE = 100 / ((LOAD_TIME * 1000) / REFRESH_TIME)
 
 const Timerbar = (props: Props) => {
   let [width, setWidth] = useState(0)
 
   useInterval(() => {
-    if (width < 100) {
-      setWidth(width + 0.2)
+    if (!props.pause) {
+      if (width < 100) {
+        setWidth(width + WIDTH_INCREASE)
+      } else {
+        setWidth(0)
+        props.changeQuestion()
+      }
     } else {
       setWidth(0)
-      if (props.questionIndex < props.questionsLength - 1) {
-        props.incrementIndex()
-      } else {
-        props.decrementIndex()
-      }
     }
-  }, 20)
+  }, REFRESH_TIME)
 
   return (
     <div className={styles.timer_bar}>

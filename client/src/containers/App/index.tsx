@@ -4,8 +4,8 @@ import { Route, Switch } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
+import { RootState } from '../../store'
 import { importMessages } from '../../i18n'
-import { RootState } from '../../constants/types'
 
 import en from '../../i18n/en.json' // default to english
 import routes from '../../routes'

@@ -1,9 +1,13 @@
 import styles from './styles.module.scss'
 
-const LoadingSpinner = () => {
+interface Props {
+  small?: boolean
+}
+
+const LoadingSpinner = (props: Props) => {
   return (
-    <div className={styles.spinnerWrapper}>
-      <div className={styles.spinner} />
+    <div className={props.small ? styles.spinner_wrapper_small : styles.spinner_wrapper}>
+      <div className={props.small ? styles.spinner_small : styles.spinner} />
     </div>
   )
 }

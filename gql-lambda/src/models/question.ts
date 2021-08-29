@@ -31,17 +31,15 @@ class Question {
   @attribute()
   public type?: string
 
-  @Field({ nullable: false })
-  @attribute()
-  public note?: string
-
-  @Field((_type) => Int)
-  @attribute()
-  public answer?: number
-
   @Field((_type) => [Option])
   @attribute()
   public options?: Array<Option>
+
+  @attribute()
+  public note?: string
+
+  @attribute()
+  public answer?: number
 }
 
 export default Question

@@ -1,7 +1,8 @@
 import { request, gql, ClientError } from 'graphql-request'
 import { createApi } from '@reduxjs/toolkit/query/react'
 
-const graphqlBaseQuery = ({ baseUrl }: { baseUrl: string }) =>
+const graphqlBaseQuery =
+  ({ baseUrl }: { baseUrl: string }) =>
   async ({ body }: { body: string }) => {
     try {
       const result = await request(baseUrl, body)
@@ -18,6 +19,7 @@ const questionsAPI = createApi({
   baseQuery: graphqlBaseQuery({
     baseUrl: process.env.REACT_APP_BASE_URL || '',
   }),
+  reducerPath: 'questionsAPI',
   endpoints: (builder) => ({
     getQuestions: builder.query({
       query: () => ({
@@ -36,7 +38,20 @@ const questionsAPI = createApi({
         `,
       }),
       transformResponse: (response) => response.allQuestions,
-    })
+    }),
+    validateResponse: builder.mutation({
+      query: (args: any) => ({
+        body: gql`
+          query {
+            validateAnswer(questionId: "${args.questionId}", selectedOption: ${args.selectedOption}) {
+              note
+              correct
+            }
+          }
+        `,
+      }),
+      transformResponse: (response) => response.validateAnswer,
+    }),
   }),
 })
 
