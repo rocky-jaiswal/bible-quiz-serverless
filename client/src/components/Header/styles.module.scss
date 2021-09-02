@@ -3,13 +3,11 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   color: $main-white;
   height: 60px;
 
   background: $main-accent;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
 
   a {
     color: $main-white;

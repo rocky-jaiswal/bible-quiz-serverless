@@ -12,6 +12,7 @@ import styles from './styles.module.scss'
 interface Props {
   questions: QuestionType[]
   currentQuestionIndex: number
+  currentQuestionId: string
   isCheckingResponse: boolean
   noteText: string | null
   responseResult: string
@@ -30,20 +31,27 @@ const Questions = (props: Props) => {
     }
   }
 
+  const handleOptionSelect = async (optionId: number) => {
+    const result = await props.handleSelection({
+      selectedOption: optionId,
+      questionId: props.currentQuestionId,
+    })
+    props.setResponse({ result: result.data, selectedOption: optionId })
+  }
+
   return (
     <div className={styles.questions_container}>
-      <Timerbar changeQuestion={changeQuestion} pause={props.isCheckingResponse} />
+      <Timerbar pause={props.isCheckingResponse} onComplete={handleOptionSelect} />
       <Question questionText={props.questions[props.currentQuestionIndex].question} />
-      {props.noteText !== null ? (
-        <Note noteText={props.noteText} responseResult={props.responseResult} changeQuestion={changeQuestion} />
+      {props.responseResult !== 'unselected' ? (
+        <Note noteText={props.noteText || ''} responseResult={props.responseResult} changeQuestion={changeQuestion} />
       ) : (
         <Options
           options={props.questions[props.currentQuestionIndex].options}
           currentQuestionIndex={props.currentQuestionIndex}
-          currentQuestionId={props.questions[props.currentQuestionIndex].id}
+          currentQuestionId={props.currentQuestionId}
           isCheckingResponse={props.isCheckingResponse}
-          handleSelection={props.handleSelection}
-          setResponse={props.setResponse}
+          handleSelection={handleOptionSelect}
         />
       )}
     </div>

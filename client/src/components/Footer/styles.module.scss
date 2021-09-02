@@ -1,16 +1,13 @@
 @import '../../styles/variables';
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $main-alt;
-  color: $main-white;
-  padding: 10px;
+  color: $main-darker;
 
-  a {
-    color: $main-white;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
+  p {
+    margin-left: 10px;
   }
 }

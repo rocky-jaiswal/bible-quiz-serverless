@@ -24,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*' --ignore-pattern 'src/**/*.scss' --ignore-pattern 'src/**/*.css'  --ignore-pattern 'src/i18n/*.json'",
-    "prettier": "prettier --write 'src/**/*'"
+    "prettier": "prettier --write 'src/**/*'",
+    "firebase:deploy": "rm -rf build && yarn build && npx firebase deploy"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.0.0",
@@ -37,6 +38,7 @@
     "@types/react-router": "^5.0.0",
     "@types/react-router-dom": "^5.0.0",
     "@types/react-router-redux": "^5.0.16",
+    "firebase-tools": "^9.17.0",
     "node-sass": "^6.0.0",
     "prettier": "^2.0.0",
     "redux-devtools-extension": "^2.13.7",

@@ -9,21 +9,61 @@
   border-radius: 10px;
   padding: 20px;
   margin-top: 50px;
-  position: relative;
-
-  &_correct {
-    @extend .note_area;
-    border: 1px solid $success-green;
-  }
-
-  &_wrong {
-    @extend .note_area;
-    border: 1px solid $error-red;
-  }
 
   button.next_question {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 20px 0px 0;
+    border-width: 0 0 4px 0;
+    border-color: $light-gray;
+    color: $main-white;
+    background: $confirm-blue;
+    color: $main-darker;
+  }
+}
+
+.note_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.svg_image {
+  width: 200px;
+}
+
+.outer_success {
+  fill: transparent;
+  stroke: $success-green;
+  stroke-width: 10;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  animation: show100 2s;
+  animation-iteration-count: 3;
+}
+
+.outer_wrong {
+  fill: transparent;
+  stroke: $error-red;
+  stroke-width: 10;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  animation: show100 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes show100 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 0;
   }
 }

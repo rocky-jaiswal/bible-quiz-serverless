@@ -9,6 +9,7 @@ import styles from './styles.module.scss'
 
 interface Props {
   switchLocale(lang: LocaleEnum): unknown
+  score: { correct: number; incorrect: number }
   children?: React.ReactElement<{}>
 }
 
@@ -19,7 +20,7 @@ const Layout = (props: Props) => {
       <div className={styles.page}>
         <div className={styles.main}>{React.Children.toArray(props.children)}</div>
       </div>
-      <Footer />
+      <Footer score={props.score} />
     </div>
   )
 }

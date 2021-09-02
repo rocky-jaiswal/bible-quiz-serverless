@@ -16,6 +16,10 @@ const initialState: AppState = {
     questionIndex: 0,
     result: 'unselected',
   },
+  score: {
+    correct: 0,
+    incorrect: 0,
+  },
   lang: LocaleEnum.en,
 }
 
@@ -65,6 +69,10 @@ export const appSlice = createSlice({
         }
         state.note = {
           text: action.payload.result.note,
+        }
+        state.score = {
+          correct: action.payload.result.correct ? state.score.correct + 1 : state.score.correct,
+          incorrect: !action.payload.result.correct ? state.score.incorrect + 1 : state.score.incorrect,
         }
       }
     },

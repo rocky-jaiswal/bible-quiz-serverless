@@ -11,7 +11,7 @@ const Header = (_props: Props) => {
   return (
     <div className={styles.header}>
       <div className={styles.header_content}>
-        <Link to="/">Home</Link>
+        <Link to="/">Bible Quiz</Link>
       </div>
     </div>
   )

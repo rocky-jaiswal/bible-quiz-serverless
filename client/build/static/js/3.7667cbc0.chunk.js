@@ -1,0 +1,2 @@
+(this["webpackJsonpsample-app"]=this["webpackJsonpsample-app"]||[]).push([[3],{84:function(p){p.exports=JSON.parse('{"app.welcome":"Wilkommen","app.about":"Uber uns"}')}}]);
+//# sourceMappingURL=3.7667cbc0.chunk.js.map

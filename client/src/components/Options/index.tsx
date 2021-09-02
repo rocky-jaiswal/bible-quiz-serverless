@@ -10,8 +10,7 @@ interface Props {
   currentQuestionId: string
   options: OptionType[]
   isCheckingResponse: boolean
-  handleSelection: ({ questionId, selectedOption }: { questionId: string; selectedOption: number }) => any
-  setResponse: (payload: unknown) => void
+  handleSelection: (selectedOption: number) => any
 }
 
 const Options = (props: Props) => {
@@ -26,11 +25,7 @@ const Options = (props: Props) => {
               disabled={props.isCheckingResponse}
               onClick={async () => {
                 setSelected(option.id)
-                const result = await props.handleSelection({
-                  selectedOption: option.id,
-                  questionId: props.currentQuestionId,
-                })
-                props.setResponse({ result: result.data, selectedOption: option.id })
+                props.handleSelection(option.id)
               }}
             >
               {props.isCheckingResponse && selected === option.id ? (

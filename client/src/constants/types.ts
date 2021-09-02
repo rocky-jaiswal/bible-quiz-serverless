@@ -14,6 +14,10 @@ export interface AppState {
     questionIndex: number
     result: 'unselected' | 'correct' | 'wrong'
   }
+  score: {
+    correct: number
+    incorrect: number
+  }
   lang: LocaleEnum
 }
 

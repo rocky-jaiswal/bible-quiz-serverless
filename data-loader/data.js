@@ -21,7 +21,7 @@ module.exports = [
       { id: 4, text: '8' }
     ],
     answer: 3,
-    note: 'From Genesis 41, the pharoah saw two dreams. The head cupbearer then remembered Joseph from prison.'
+    note: 'From Genesis 41, the pharoah saw two dreams. In his dream he saw 7 cows. The head cupbearer then remembered Joseph from prison.'
   },
   {
     question: 'The three friends who tried to comfort Job were named - Bildad, Zophar and ...?',
@@ -33,7 +33,7 @@ module.exports = [
       { id: 4, text: 'Hezekiah' }
     ],
     answer: 1,
-    note: 'From Job 2, these three friend of Job traveled from their country to comfort Job.'
+    note: 'From Job 2, three friend of Job traveled from their country to comfort Job. Eliphaz from Teman, Bildad from Shuhah and Zophar from Naamath'
   },
   {
     question: 'From Psalm 1, when you delight in God’s word and read the scriptures day and night, you are like what?',
@@ -72,7 +72,7 @@ module.exports = [
     note: 'The vision that Isaiah son of Amoz saw regarding Judah and Jerusalem during the times of the kings of Judah: Uzziah, Jotham, Ahaz, and Hezekiah.'
   },
   {
-    question: 'Matthew 1 mentions the family tree of Jesus. Who was Jesus’s grandfather?',
+    question: 'Matthew 1 mentions the family tree of Jesus. Who was Jesus’ grandfather?',
     type: 'multiple_choice',
     options: [
       { id: 1, text: 'Matthan' },
@@ -81,7 +81,7 @@ module.exports = [
       { id: 4, text: 'David' }
     ],
     answer: 2,
-    note: ''
+    note: 'From Matthew 1 - ...Matthan had Jacob, Jacob had Joseph, Mary’s husband'
   },
   {
     question: 'According to Jesus what is easier than for the rich and "have it all" to enter the kingdom of God?',
@@ -105,7 +105,7 @@ module.exports = [
       { id: 4, text: 'John 6:12' }
     ],
     answer: 2,
-    note: ''
+    note: 'John 3:16 - "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life"'
   },
   {
     question: 'For I am convinced that neither death nor life, neither angels nor demons, neither the present nor the future, nor any powers, neither height nor depth, nor anything else in all creation, will be able to separate us from the love of God that is in Christ Jesus our Lord',
@@ -117,6 +117,6 @@ module.exports = [
       { id: 4, text: 'Is from Philippians 3' }
     ],
     answer: 1,
-    note: ''
+    note: 'Romans 8:38 says that we are "more than conquerors" with Christ - If God is for us, who can be against us.'
   }
 ]

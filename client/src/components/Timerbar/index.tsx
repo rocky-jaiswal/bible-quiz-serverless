@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 
 interface Props {
   pause: boolean
-  changeQuestion: () => void
+  onComplete: (selectedOption: number) => any
 }
 
 const LOAD_TIME = 15
@@ -21,7 +21,7 @@ const Timerbar = (props: Props) => {
         setWidth(width + WIDTH_INCREASE)
       } else {
         setWidth(0)
-        props.changeQuestion()
+        props.onComplete(99)
       }
     } else {
       setWidth(0)

@@ -13,6 +13,7 @@ import styles from './styles.module.scss'
 
 const Root = () => {
   const dispatch = useDispatch()
+
   const currentQuestionIndex = useSelector((state: RootState) => state.app.question.currentIndex)
   const noteText = useSelector((state: RootState) => state.app.note.text)
   const responseResult = useSelector((state: RootState) => state.app.response.result)
@@ -21,26 +22,27 @@ const Root = () => {
   const [selectResponse, { isLoading: isCheckingResponse, error: errorInChecking }] = api.useValidateResponseMutation()
 
   if (errorLoadingQuestions || errorInChecking) {
-    return <div>Error!!</div>
+    return <div>Error! Please try again later.</div>
+  }
+
+  if (loadingQuestions) {
+    return <LoadingSpinner />
   }
 
   return (
     <div className={styles.container}>
-      {loadingQuestions ? (
-        <LoadingSpinner />
-      ) : (
-        <Questions
-          questions={questions}
-          currentQuestionIndex={currentQuestionIndex}
-          isCheckingResponse={isCheckingResponse || noteText !== null}
-          noteText={noteText}
-          responseResult={responseResult}
-          incrementIndex={() => dispatch(incrementIndex())}
-          resetIndex={() => dispatch(resetIndex())}
-          setResponse={(payload: unknown) => dispatch(setResponse(payload))}
-          handleSelection={selectResponse}
-        />
-      )}
+      <Questions
+        questions={questions}
+        currentQuestionIndex={currentQuestionIndex}
+        currentQuestionId={questions[currentQuestionIndex].id}
+        isCheckingResponse={isCheckingResponse || noteText !== null}
+        noteText={noteText}
+        responseResult={responseResult}
+        incrementIndex={() => dispatch(incrementIndex())}
+        resetIndex={() => dispatch(resetIndex())}
+        setResponse={(payload: unknown) => dispatch(setResponse(payload))}
+        handleSelection={selectResponse}
+      />
     </div>
   )
 }

@@ -1,8 +1,15 @@
 import styles from './styles.module.scss'
 
-const Footer = (_props: {}) => {
+interface Props {
+  score: { correct: number; incorrect: number }
+}
+
+const Footer = (props: Props) => {
   return (
-    <div className={styles.footer} />
+    <div className={styles.footer}>
+      <p>Correct: {props.score.correct}</p>
+      <p>Incorrect: {props.score.incorrect}</p>
+    </div>
   )
 }
 
