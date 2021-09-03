@@ -19,7 +19,8 @@ const Root = () => {
   const responseResult = useSelector((state: RootState) => state.app.response.result)
 
   const { data: questions, error: errorLoadingQuestions, isLoading: loadingQuestions } = api.useGetQuestionsQuery(null)
-  const [selectResponse, { isLoading: isCheckingResponse, error: errorInChecking }] = api.useValidateResponseMutation()
+  const [validateResponse, { isLoading: isCheckingResponse, error: errorInChecking }] =
+    api.useValidateResponseMutation()
 
   if (errorLoadingQuestions || errorInChecking) {
     return <div>Error! Please try again later.</div>
@@ -41,7 +42,7 @@ const Root = () => {
         incrementIndex={() => dispatch(incrementIndex())}
         resetIndex={() => dispatch(resetIndex())}
         setResponse={(payload: unknown) => dispatch(setResponse(payload))}
-        handleSelection={selectResponse}
+        handleSelection={validateResponse}
       />
     </div>
   )

@@ -60,7 +60,7 @@ module.exports = [
     note: 'From Ecclesiastes 12 - The last and final word is this: Fear God. Do what He tells you. And that’s it.'
   },
   {
-    question: 'Isiah was a prophet during the time of - Uzziah, Jotham, Ahaz and ...?',
+    question: 'Isaiah was a prophet during the time of - Uzziah, Jotham, Ahaz and ...?',
     type: 'multiple_choice',
     options: [
       { id: 1, text: 'Joash' },
@@ -69,7 +69,7 @@ module.exports = [
       { id: 4, text: 'David' }
     ],
     answer: 3,
-    note: 'The vision that Isaiah son of Amoz saw regarding Judah and Jerusalem during the times of the kings of Judah: Uzziah, Jotham, Ahaz, and Hezekiah.'
+    note: 'From Isaiah 1:1 - The vision that Isaiah son of Amoz saw regarding Judah and Jerusalem during the times of the kings of Judah: Uzziah, Jotham, Ahaz, and Hezekiah.'
   },
   {
     question: 'Matthew 1 mentions the family tree of Jesus. Who was Jesus’ grandfather?',
@@ -118,5 +118,137 @@ module.exports = [
     ],
     answer: 1,
     note: 'Romans 8:38 says that we are "more than conquerors" with Christ - If God is for us, who can be against us.'
+  },
+  {
+    question: 'What is the very last verse of the Bible?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Don’t seal the words of the prophecy of this book!' },
+      { id: 2, text: 'The grace of the Master Jesus be with all of you. Amen!' },
+      { id: 3, text: 'Only those whose names are written in the Lamb’s Book of Life will get in.' },
+      { id: 4, text: 'I saw a Great White Throne and the One Enthroned.' }
+    ],
+    answer: 2,
+    note: 'Revelation 22:21 - The grace of the Master Jesus be with all of you. Amen!'
+  },
+  {
+    question: 'What is the last book of the Old Testament?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Haggai' },
+      { id: 2, text: 'Nahum' },
+      { id: 3, text: 'Malachi' },
+      { id: 4, text: 'Micah' }
+    ],
+    answer: 3,
+    note: 'The book of prophet Malachi is the last book in the Old Testament.'
+  },
+  {
+    question: 'In Luke 7, Jesus visits which village where he raises a widow’s only son?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Capernaum' },
+      { id: 2, text: 'Nazareth' },
+      { id: 3, text: 'Galilee' },
+      { id: 4, text: 'Nain' }
+    ],
+    answer: 4,
+    note: 'From Luke 7:11 - When Jesus saw her, his heart broke. He said to her, “Don’t cry.” Then he went over and touched the coffin. He said, “Young man, I tell you: Get up.” The dead son sat up and began talking. Jesus presented him to his mother.'
+  },
+  {
+    question: 'Which chapter of 1 Corinthians talks about love?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: '12' },
+      { id: 2, text: '13' },
+      { id: 3, text: '14' },
+      { id: 4, text: '15' }
+    ],
+    answer: 2,
+    note: '1 Corinthians 13 talks about love - "If I speak with human eloquence and angelic ecstasy but don’t love, I’m nothing but the creaking of a rusty gate."'
+  },
+  {
+    question: 'Which is the longest Psalm?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: '119' },
+      { id: 2, text: '120' },
+      { id: 3, text: '121' },
+      { id: 4, text: '122' }
+    ],
+    answer: 1,
+    note: 'Psalm 119 has 176 verses and talks mainly about the value of following the word of God.'
+  },
+  {
+    question: 'From the book of Esther - who was queen Esther’s relative?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Shimei' },
+      { id: 2, text: 'Mordecai' },
+      { id: 3, text: 'Hagai' },
+      { id: 4, text: 'Xerxes' }
+    ],
+    answer: 2,
+    note: 'From Esther 2 - Mordecai had raised his cousin Hadassah, otherwise known as Esther, since she had no father or mother.'
+  },
+  {
+    question: 'According to Proverbs, where does knowledge begin?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Respect for God' },
+      { id: 2, text: 'An honest life' },
+      { id: 3, text: 'Fear of accidents' },
+      { id: 4, text: 'Advice of friends' }
+    ],
+    answer: 1,
+    note: 'Proverbs 1:7 - Start with God — the first step in learning is bowing down to God.'
+  },
+  {
+    question: 'There’s an opportune time to do things, a right time for everything on the earth. Where are these famous verses found?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Esther 3' },
+      { id: 2, text: 'Job 3' },
+      { id: 3, text: 'Proverbs 3' },
+      { id: 4, text: 'Ecclesiastes 3' }
+    ],
+    answer: 4,
+    note: 'Ecclesiastes 3, the wise man talks about time - There is a right time for everything. A right time for birth and another for death ...'
+  },
+  {
+    question: 'From the book of Nehemiah - what was Nehemiah profession?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Soldier' },
+      { id: 2, text: 'Cupbearer to the king' },
+      { id: 3, text: 'Builder' },
+      { id: 4, text: 'Bodyguard for the prince' }
+    ],
+    answer: 2,
+    note: 'From Nehemiah 1/2 - I was cupbearer to the king. At the hour for serving wine I brought it in and gave it to the king. I had never been hangdog in his presence before, so he asked me, “Why the long face? You’re not sick are you? Or are you depressed?”'
+  },
+  {
+    question: 'In the often read story of the "Woman at the well", where did Jesus meet the Samaritan woman?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: 'Nain' },
+      { id: 2, text: 'Judah' },
+      { id: 3, text: 'Sychar' },
+      { id: 4, text: 'Jerusalem' }
+    ],
+    answer: 3,
+    note: 'From John 4 - Jesus had to pass through Samaria. He came into Sychar, a Samaritan village that bordered the field Jacob had given his son Joseph. Jacob’s well was still there.'
+  },
+  {
+    question: 'Jesus raised Lazarus from the dead. How many days had passed since he was dead?',
+    type: 'multiple_choice',
+    options: [
+      { id: 1, text: '2' },
+      { id: 2, text: '3' },
+      { id: 3, text: '4' },
+      { id: 4, text: '5' }
+    ],
+    answer: 3,
+    note: 'From John 11 - When Jesus finally got there, he found Lazarus already four days dead. Martha said, “Master, if you’d been here, my brother wouldn’t have died. Even now, I know that whatever you ask God he will give you.”'
   }
 ]

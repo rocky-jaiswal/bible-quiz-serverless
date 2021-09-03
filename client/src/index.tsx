@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 
 import App from './containers/App'
 import { store } from './store'
-// import * as serviceWorker from './serviceWorker'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 
 import 'normalize.css'
 import './styles/main.css'
@@ -18,4 +18,4 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 )
 
-// serviceWorker.register()
+serviceWorkerRegistration.register()

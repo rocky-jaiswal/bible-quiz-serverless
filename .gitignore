@@ -6,3 +6,6 @@ cdk.out
 __pycache__/
 **/loader.zip
 **/lambda.zip
+client/build
+client/.firebase
+client/.firebase/*.cache
