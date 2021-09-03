@@ -27,7 +27,7 @@ class AppStack(cdk.Stack):
         )
 
         cors_options = _apigw.CorsOptions(
-            allow_origins=_apigw.Cors.ALL_ORIGINS,
+            allow_origins=["http://localhost:3000", "https://bible-spiel.web.app"],
             allow_methods=_apigw.Cors.ALL_METHODS,
         )
 
